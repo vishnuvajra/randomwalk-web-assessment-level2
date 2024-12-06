@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="playerx">
+        <img src="al.png" alt="image" height="300px" width="300px" style="margin-left: 100px">
+        <h2 style="margin-left: 200px;">Player X</h2>
+        <h3 id="playerX-turn" style="display: none; margin-left: 200px; color: green;">It's your turn!</h3>
+    </div>
+
+    <main class="container" style="margin: auto;">
+        <h1 style="margin: auto; margin-bottom: 20px;">Tic Tac Toe</h1>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch">Toggle Dark/Light Mode</label>
+        </div>
+        <div id="tictactoe" role="grid" aria-label="Tic Tac Toe Board"></div>
+        <div id="player" align="center">
+            <span id="turn" role="status" aria-live="polite">Player X</span>
+        </div>
+    </main>
+
+    <div class="playero">
+        <img src="al.png" alt="image" height="300px" width="300px" style="margin-right: 100px">
+        <h2 style="margin-left: 100px;">Player O</h2>
+        <h3 id="playerO-turn" style="display: none; margin-left: 100px; color: green;">It's your turn!</h3>
+    </div>
+
+    <!-- Celebration Toast -->
+    <div id="celebration" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; text-align: center; color: white;">
+        <h1 id="celebration-message" style="margin-top: 20%; font-size: 3rem; font-weight: bold;">Congratulations Player X!</h1>
+        <canvas id="confetti-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
